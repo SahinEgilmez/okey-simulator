@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.segilmez.okeysimulator'
+version = '1.0-SNAPSHOT'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.segilmez.okeysimulator.Main'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
